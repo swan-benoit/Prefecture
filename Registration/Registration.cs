@@ -1,6 +1,6 @@
 using System;
 
-public class Registration : ICounter<Tuple<PairLetter, TripletNumber, PairLetter>, Registration>
+public class Registration : ICounter<Tuple<PairLetter, TripletNumber, PairLetter>, Registration>, IRegistration
 {
     public Tuple<PairLetter, TripletNumber, PairLetter> Current { get; set; }
 

@@ -14,12 +14,16 @@ namespace prefecture_web.Controllers
             Next();
             return View();
         }
+        
+        
 
         private void Next()
         {
             var registration = RegistrationSingleton.GetInstance().next();
             
-            ViewBag.Registration = registration;
+            ViewBag.FrRegistration = new FrenchRegistration(registration);
+            ViewBag.EsRegistration = new SpanishRegistration(registration);
+            ViewBag.EnRegistration = new EnglishRegistration(registration);
         }
 
         
